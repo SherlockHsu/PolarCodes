@@ -14,6 +14,6 @@
 
 仿真方法
 ---
-1. 通过matlab中的mex命令编译各目录下的c文件
-2. 编写测试PolarCodes的matlab脚本文件
-3. 利用编译产生的mex文件和matlab脚本文件对Polar码进行仿真
+> 1. 通过matlab中的mex命令编译各目录下的c文件
+> 2. 编写测试PolarCodes的matlab脚本文件
+> 3. 利用编译产生的mex文件和matlab脚本文件对Polar码进行仿真
