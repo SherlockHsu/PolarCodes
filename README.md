@@ -1,5 +1,4 @@
 # PolarCodes
-PolarCodes
 ==========
 Polar码编解码器
 ----------
