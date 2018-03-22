@@ -1,0 +1,43 @@
+load('dataSCL02.mat');
+
+figure;
+
+semilogy(ListSNR,BERSC(3,:),'b*--');
+hold on;
+semilogy(ListSNR,BERSCL(3,:),'bs-');
+semilogy(ListSNR,BERSC(5,:),'g*--');
+semilogy(ListSNR,BERSCL(5,:),'gs-');
+semilogy(ListSNR,BERSC(7,:),'r*--');
+semilogy(ListSNR,BERSCL(7,:),'rs-');
+
+legend(['SC, N=',num2str(ListN(3))],...
+    ['SCL, N=',num2str(ListN(3))],...
+    ['SC, N=',num2str(ListN(5))],...
+    ['SCL, N=',num2str(ListN(5))],...
+    ['SC, N=',num2str(ListN(7))],...
+    ['SCL, N=',num2str(ListN(7))]...
+    );
+
+xlabel('Eb/N0(dB)');
+ylabel('BER');
+title('不同码长下SC, SCL译码误码曲线(R=0.5, N_s=2\^20)');
+grid on;
+
+figure;
+for i = 1:NListn
+    semilogy(ListSNR,BERSCL(i,:));
+    hold on;
+end
+legend(['N=',num2str(ListN(1))],...
+    ['N=',num2str(ListN(2))],...
+    ['N=',num2str(ListN(3))],...
+    ['N=',num2str(ListN(4))],...
+    ['N=',num2str(ListN(5))],...
+    ['N=',num2str(ListN(6))],...
+    ['N=',num2str(ListN(7))]...
+    );
+
+xlabel('Eb/N0(dB)');
+ylabel('BER');
+title('不同码长下的SCL译码误码曲线(R=0.5, N_s=2\^20)');
+grid on;
